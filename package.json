@@ -1,0 +1,50 @@
+{
+  "name": "@most/most-file-reader",
+  "version": "1.0.0",
+  "description": "most-file-reader",
+  "main": "dist/most-file-reader.js",
+  "files": [
+    "dist/most-file-reader.js"
+  ],
+  "scripts": {
+    "build-dist": "mkdir -p dist && rollup src/index.js | babel --presets es2015 --plugins transform-es2015-modules-umd --module-id '@most/most-file-reader' -o dist/most-file-reader.js",
+    "build": "npm run build-dist && uglifyjs dist/most-file-reader.js -o dist/most-file-reader.min.js",
+    "prepublish": "npm run build",
+    "preversion": "npm run build",
+    "unit-test": "babel-node ./node_modules/.bin/isparta cover _mocha",
+    "lint": "jsinspect src && jsinspect test && eslint src test",
+    "test": "npm run lint && npm run unit-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mostjs/most-file-reader.git"
+  },
+  "author": "Your Name <you@wherever.com> (github.com/<you>)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mostjs/most-file-reader/issues"
+  },
+  "homepage": "https://github.com/mostjs/most-file-reader#readme",
+  "devDependencies": {
+    "@most/eslint-config-most": "^1.0.2",
+    "assert": "^1.4.0",
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.0",
+    "babel-eslint": "^6.0.4",
+    "babel-plugin-transform-es2015-modules-umd": "^6.8.0",
+    "babel-preset-es2015": "^6.9.0",
+    "eslint": "^2.10.2",
+    "eslint-config-standard": "^5.3.1",
+    "eslint-plugin-promise": "^1.1.0",
+    "eslint-plugin-standard": "^1.3.2",
+    "isparta": "^4.0.0",
+    "jsinspect": "^0.8.0",
+    "mocha": "^2.5.3",
+    "most": "^0.19.3",
+    "rollup": "^0.26.3",
+    "uglify-js": "^2.6.1"
+  },
+  "peerDependencies": {
+    "most": "^0.19.6"
+  }
+}
