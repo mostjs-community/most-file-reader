@@ -9,30 +9,30 @@ FileReader for [most](https://github.com/cujojs/most)
 
 ## API
 
-### readAsDataUrl :: Stream File → Stream Event
+### readAsDataURL :: Stream File → Stream Event
 
 ```js
-import {readAsDataUrl} from 'most-file-reader'
+import {readAsDataURL} from 'most-file-reader'
 import {change} from '@most/dom-event'
 import {from} from 'most'
 
 const filesStream = change(document.body)
     .chain(event => from(event.target.files).filter(file => file.type.match('image')))
 
-readAsDataUrl(filesStream)
+readAsDataURL(filesStream)
     .observe(console.info.bind(console))
 ```
 
 or fluently with `thru`
 
 ```js
-import {readAsDataUrl} from 'most-file-reader'
+import {readAsDataURL} from 'most-file-reader'
 import {change} from '@most/dom-event'
 import {from} from 'most'
 
 change(document.body)
     .chain(event => from(event.target.files).filter(file => file.type.match('image')))
-    .thru(readAsDataUrl)
+    .thru(readAsDataURL)
     .observe(console.info.bind(console))
 ```
 `readAsDataUrl` will output a `ProgressEvent` which contains a base64 encoded url.
@@ -58,7 +58,7 @@ import {from} from 'most'
 const fileStream = change(document.body)
     .chain(event => from(event.target.files))
 
-fileReader('readAsDataUrl', fileStream)
+fileReader('readAsDataURL', fileStream)
     .observe(console.info.bind(console))
 ```
 
