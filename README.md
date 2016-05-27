@@ -65,3 +65,8 @@ fileReader('readAsDataURL', fileStream)
 ## Todo
 - [ ] Add tests
 - [ ] Publish to npm
+
+
+## Made with
+
+[@most/package-starter](https://github.com/mostjs/package-starter)
