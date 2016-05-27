@@ -23,7 +23,7 @@ readAsDataURL(filesStream)
     .observe(console.info.bind(console))
 ```
 
-or fluently with `thru`
+or fluently with [thru](https://github.com/cujojs/most/blob/master/docs/api.md#thru)
 
 ```js
 import {readAsDataURL} from 'most-file-reader'
