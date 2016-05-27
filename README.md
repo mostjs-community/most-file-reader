@@ -35,7 +35,7 @@ change(document.body)
     .thru(readAsDataURL)
     .observe(console.info.bind(console))
 ```
-`readAsDataUrl` will output a `ProgressEvent` which contains a base64 encoded url.
+`readAsDataURL` will output a `ProgressEvent` which contains a base64 encoded url.
 
 
 ### readAsArrayBuffer :: Stream File → Stream Event
