@@ -1,5 +1,5 @@
 {
-  "name": "@most/most-file-reader",
+  "name": "most-file-reader",
   "description": "FileReader for most",
   "version": "1.0.0",
   "author": "David Chase <davidchase03@gmail.com> (github.com/davidchase)",
