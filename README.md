@@ -64,7 +64,7 @@ fileReader('readAsDataURL', fileStream)
 
 ## Todo
 - [ ] Add tests
-- [ ] Publish to npm
+- [x] Publish to npm
 
 
 ## Made with
