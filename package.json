@@ -1,30 +1,14 @@
 {
   "name": "@most/most-file-reader",
+  "description": "FileReader for most",
   "version": "1.0.0",
-  "description": "most-file-reader",
-  "main": "dist/most-file-reader.js",
-  "files": [
-    "dist/most-file-reader.js"
-  ],
-  "scripts": {
-    "build-dist": "mkdir -p dist && rollup src/index.js | babel --presets es2015 --plugins transform-es2015-modules-umd --module-id '@most/most-file-reader' -o dist/most-file-reader.js",
-    "build": "npm run build-dist && uglifyjs dist/most-file-reader.js -o dist/most-file-reader.min.js",
-    "prepublish": "npm run build",
-    "preversion": "npm run build",
-    "unit-test": "babel-node ./node_modules/.bin/isparta cover _mocha",
-    "lint": "jsinspect src && jsinspect test && eslint src test",
-    "test": "npm run lint && npm run unit-test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mostjs/most-file-reader.git"
-  },
-  "author": "Your Name <you@wherever.com> (github.com/<you>)",
-  "license": "MIT",
+  "author": "David Chase <davidchase03@gmail.com> (github.com/davidchase)",
   "bugs": {
     "url": "https://github.com/mostjs/most-file-reader/issues"
   },
-  "homepage": "https://github.com/mostjs/most-file-reader#readme",
+  "dependencies": {
+    "@most/sample": "1.0.0"
+  },
   "devDependencies": {
     "@most/eslint-config-most": "^1.0.2",
     "assert": "^1.4.0",
@@ -44,10 +28,26 @@
     "rollup": "^0.26.3",
     "uglify-js": "^2.6.1"
   },
+  "files": [
+    "dist/most-file-reader.js"
+  ],
+  "homepage": "https://github.com/mostjs/most-file-reader#readme",
+  "license": "MIT",
+  "main": "dist/most-file-reader.js",
   "peerDependencies": {
     "most": "^0.19.6"
   },
-  "dependencies": {
-    "@most/sample": "1.0.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mostjs/most-file-reader.git"
+  },
+  "scripts": {
+    "build": "npm run build-dist && uglifyjs dist/most-file-reader.js -o dist/most-file-reader.min.js",
+    "build-dist": "mkdir -p dist && rollup src/index.js | babel --presets es2015 --plugins transform-es2015-modules-umd --module-id '@most/most-file-reader' -o dist/most-file-reader.js",
+    "lint": "jsinspect src && jsinspect test && eslint src test",
+    "prepublish": "npm run build",
+    "preversion": "npm run build",
+    "test": "npm run lint && npm run unit-test",
+    "unit-test": "babel-node ./node_modules/.bin/isparta cover _mocha"
   }
 }
