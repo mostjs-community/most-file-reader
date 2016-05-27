@@ -14,6 +14,7 @@ FileReader for [most](https://github.com/cujojs/most)
 ```js
 import {readAsDataUrl} from 'most-file-reader'
 import {change} from '@most/dom-event'
+import {from} from 'most';
 
 const filesStream = change(document.body)
     .chain(event => from(event.target.files).filter(file => file.type.match('image')))
@@ -27,6 +28,7 @@ or fluently with `thru`
 ```js
 import {readAsDataUrl} from 'most-file-reader'
 import {change} from '@most/dom-event'
+import {from} from 'most';
 
 change(document.body)
     .chain(event => from(event.target.files).filter(file => file.type.match('image')))
