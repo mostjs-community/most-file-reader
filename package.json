@@ -46,5 +46,8 @@
   },
   "peerDependencies": {
     "most": "^0.19.6"
+  },
+  "dependencies": {
+    "@most/sample": "1.0.0"
   }
 }
