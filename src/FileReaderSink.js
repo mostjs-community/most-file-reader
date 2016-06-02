@@ -5,7 +5,7 @@ export class FileReaderSink {
     this.method = method
     this.sink = sink
   }
-  eventi (time, value) {
+  event (time, value) {
     const sink = this.sink
     const method = this.method
     const reader = new FileReader()
